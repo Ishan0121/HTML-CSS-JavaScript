@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Video App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- For icons -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> <!-- Main container to prevent overflow -->
+        <div class="box">
+            <video id="video" autoplay></video> <!-- Main video section -->
+            <button id="buttonOn" onclick="openCamera()">Open Camera</button>
+            <button id="buttonOff" onclick="closeCamera()">Close Camera</button>
+            <button id="captureButton" onclick="captureImage()">Capture Snapshot</button> 
+            <button id="recordButton" onclick="toggleRecording()">Start Recording</button> 
+            <button id="pipButton" onclick="togglePiP()">PiP</button> 
+        </div>
+        
+        <div class="controls"> 
+            <label for="brightness">Brightness:</label>
+            <input type="range" id="brightness" min="0" max="2" step="0.1" value="1" onchange="adjustBrightness()">
+            
+            <label for="contrast">Contrast:</label>
+            <input type="range" id="contrast" min="0" max="2" step="0.1" value="1" onchange="adjustContrast()">
+            
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1" onchange="adjustVolume()">
+            
+            <button id="muteButton" onclick="toggleMute()">Mute/Unmute</button>
+            
+            <button id="darkModeButton" onclick="toggleDarkMode()">Toggle Dark Mode</button> 
+        </div>
+        
+        <div class="gallery" id="gallery"> <!-- Gallery for captured images -->
+        </div>
+        
+        <canvas id="canvas" style="display: none;"></canvas> 
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

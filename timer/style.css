@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: O;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3e393b;
+}
+#time{
+    /* display: flex; */
+    gap: 30px;
+}
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+#time .circle::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 10px solid #1b1a1c;
+    border-radius: 50%;
+}
+
+#time .circle::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #2f2e33;
+    border-radius: 50%;
+    border: 15px solid #4d4c51;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.75),    
+    0 -2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 4px 2px rgba(0, 0, 0, 0.25),
+    inset 0 -2px 2px rgba(255, 255, 255, 0.5);
+}
+
+#time .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: var(--clr);
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    z-index: 10000;
+    color: var(--clr);
+    font-size: 1.65em;
+    transform: translateY(-5px);
+}
+#time div span{
+    position: absolute;
+    transform: translateX(-50%) translateY(-5px);
+    font-size: 0.25em;
+    letter-spacing: 0.1em;
+    text-decoration: solid;
+}
+.newYear{
+    position: absolute;
+    font-size: 8em;
+    color: #fff;
+    text-align: center;
+    line-height: 0.6em;
+    z-index: 100000000;
+    display: none;
+}
+.newYear span{
+    font-size: 0.5em;
+    font-weight: 800;
+    color: #6cd8f9;
+}

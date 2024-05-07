@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: O;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #282828;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: var(--clr);
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+    overflow: hidden;
+
+}
+
+.container .card .box{
+    position: absolute;
+    inset: 10px;
+    background-color: #282828;
+    border-radius: 10px;
+}
+.container .card:hover .box{
+    background-image: url(https://w0.peakpx.com/wallpaper/205/291/HD-wallpaper-dark-doodle-thumbnail.jpg);
+}
+
+.container .card .box .icon{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: var(--clr);
+    border-bottom-right-radius: 50%;
+}
+.container .card .box .icon::before{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-top-left-radius: 30px;
+    box-shadow: -5px -5px 0 5px var(--clr);
+}
+.container .card .box .icon::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-top-left-radius: 30px;
+    box-shadow: -5px -5px 0 5px var(--clr);
+}
+
+.container .card .box .icon .iconBox{
+    position: absolute;
+    inset: 10px;
+    background: #282828;
+    border-radius: 50% 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.container .card:hover .box .icon .iconBox{
+    background:var(--clr);
+}
+.container .card .box .icon .iconBox ion-icon{
+    font-size: 4em;
+    color: #fff;
+    --ionicon-stroke-width:20px;
+    transition: 0.5s;
+}
+.container .card:hover .box .icon .iconBox ion-icon{
+    color: black;
+}
+.container .card .box .icon .iconBox:hover ion-icon{
+    font-size: 5em;
+}
+.container .card .box .content{
+    position: absolute;
+    top: 130px;
+    padding: 20px;
+    text-align: center;
+}
+.container .card .box .content h3{
+    color: #fff;
+    font-size: 1.35em;
+    font-weight: 700;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.12px;
+    transition: 0.5s;
+}
+.container .card:hover .box .content h3{
+    letter-spacing: 0.2em;
+}
+.container .card .box .content p{
+    color: #fff;
+    font-size: 0.95em;
+    opacity: 0.75;
+    margin: 0 0 10px;
+    transition: 0.5s;
+}
+.container .card:hover .box .content p{
+    opacity: 1;
+}
+.container .card .box .content a{
+    background: var(--clr);
+    color: #fff;
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.container .card .box .content a:hover{
+    letter-spacing: 0.2em;
+}
